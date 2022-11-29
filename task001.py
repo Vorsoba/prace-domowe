@@ -1,3 +1,6 @@
+# Proszę spróbować osiągnąć taki sam efekt za pomocą wyrażeń listowych. Przykłady wyrażeń listowych są w repozytorium 'snippets'.
+
+
 list_to_check = ['abc', 'pqr', 'ege', '5665', 'cc']
 
 def string_list_checker(string_list):
