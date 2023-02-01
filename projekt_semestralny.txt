@@ -1,0 +1,37 @@
+I. Proszę stworzyć klasę DictEntry, zawierającą następujące pola (nazewnictwo dowolne, ale trzymajmy się angielszczyzny):
+- Imię
+- Nazwisko
+- Data urodzenia
+- Miejsce urodzenia
+- Ulubione książki
+
+II. Proszę utworzyć instancję tej klasy, a zawartość pól proszę przyjąć jako input od użytkownika (nie wymagam walidacji, tj. wymuszania poprawności danych), 
+przy czym jedyne utrudnionienie to ulubione książki - powinna to być lista stringów-tytułów, podawanych dotąd aż użytkownik nie wprowadzi 'Q' 
+(tak, wiem, jest taka książka, niezła zresztą powieść, ale ona ma podtytuł, a tu chodzi wyłącznie o jednoznakowy string 'Q' (jak Quit) ) - kiedy taki zostanie
+wprowadzony, program powinien przestać pytać o książki - czyli ma to działać mniej więcej tak:
+- 'Podaj ulubioną książkę:'
+- 'Boska komedia'
+- 'Podaj ulubioną książkę:'
+- 'Ulisses'
+- 'Podaj ulubioną książkę:'
+- 'Q'
+Program przestaje pytać a w polu instancji klasy znajduje się lista ['Boska Komedia', 'Ulisses']. Proszę spróbować doczytać jak wymuszać input,
+aż do spełnienia pewnego warunku, jeśli ktoś nie będzie umiał sobie poradzić, proszę pisać. ;)
+
+III. Klasa powinna zawierać też metodę print_entry, która wydrukuje następujący string:
+Dane postaci:
+Imię i nazwisko: Imię Nazwisko
+Data urodzenia: Data urodzenia
+Miejsce urodzenia: Miejsce urodzenia
+Ulubione książki: [Ulubione książki]
+
+Oczywiście po dwukropkach są dane podane przez użytkownika, w przypadku książek, może to być lista nie trzeba tego jakoś ładniej ogrywać 
+(co nie znaczy, że się nie da i chętni mogą spróbować - chętni mogą także spróbować wartości domyślnych, które 
+dla pól innych niż Ulubione książki zostaną wprowadzone po naciśnięciu przez użytkownika Enter bez innych danych (czyli wprowadzeniu pustego stringa) ).
+
+IV. Ogólny flow powinien zatem wyglądać tak:
+- Pobieramy input od użytkownika,
+- Tworzymy instancję klasy DictEntry z tymi danymi,
+- Drukujemy dane instancji wywołując metodę print_entry.
+
+MIŁEJ ZABAWY I POWODZENIA!!!
