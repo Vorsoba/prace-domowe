@@ -1,0 +1,44 @@
+Dla użytkowników Windows: najpierw należy sprawdzić/ustawić politykę uruchamiania skryptów na Państwa maszynach, 
+bo inaczej Pycharm nie utworzy Państwu sam z siebie środowisk wirtualnych i konsola będzie sypać błędami - można to zrobić ręcznie, 
+ale dużo prościej będzie ustawić tę politykę. W tym celu proszę uruchomić PowerShella w trybie administratora. 
+Proszę w wyszukiwarce u dołu ekranu (czyli w Cortanie) zacząć wpisywać `Powershell` - powinna pojawić się klikalna opcja.
+Proszę na nią kliknąć prawym przyciskiem i wybrać `Uruchom jako administrator` - system może poprosić o hasło, chyba że konto,
+na którym będziecie Państwo zalogowani już ma takie uprawnienia.
+Jeśli wszystko pójdzie dobrze, powinniście Państwo zobaczyć konsolę PowerShella. Proszę w nią wpisać (albo skopiować i wkleić poniższą linijkę):
+
+Set-ExecutionPolicy --ExecutionPolicy Unrestricted --Scope LocalMachine
+
+i potwierdzić wszystko przez 'Y' - to tyle zabawy z PowerShellem.
+
+Gdy to już Państwo ustawicie (użytkownicy innych systemów mogą zacząć od tego kroku, 
+podobnie w naszej pracowni ja już to wykonałem na wszystkich komputerach),
+proszę uruchomić Pycharma i stworzyć nowy projekt Pythonowy. Wybieracie Państwo defaultowe opcje na ekranie,
+(to i tak będzie projekt, który niedługo wywalimy, chciałbym tylko, żebyśmy się na razie lightowo pobawili Django). 
+Gdy już będzie utworzony, zobaczycie Państwo, że prompt w terminalu zaczyna się od (env), czy czegoś podobnego, 
+to znak, że wszystko na razie działa dobrze i że znajdujecie się Państwo w stworzonym przez Pycharma
+środowisku wirtualnym - można instalować do woli, nie kłopocząc się o zaśmiecenie systemowego Pythona.
+Znajdując się w katalogu projektu (uwaga, nie w katalogu 'env', tego nie ma co ruszać, to jest właśnie środowisko wirtualne, tam mieszka
+interpreter Pythona, biblioteki itp.) proszę wpisać w konsoli:
+
+pip install django
+
+To powinno zainstalować najnowszą wersję Django i jej zależności w środowisku projektu, w konsoli będzie wyświetlał się postęp itd.
+
+Gdy już Django będzie zainstalowane, proszę wpisać w konsoli
+
+django-admin startproject <tu wybrana przez Państwa nazwa projektu>
+
+Zobaczycie Państwo, że stworzy się pewna charakterystyczna dla projektów Djangowych struktura plików i katalogów.
+Teraz interesuje nas plik `manage.py`, który jest najlepszym przyjacielem Django developera. Proszę w konsoli przejść 
+do katalogu zawierającego ten plik (katalogi zmieniamy poleceniem `cd <nazwa katalogu>`, aby przejść do katalogu znajdującego się poziom niżej,
+a poziom wyżej przechodzimy za pomocą `cd ..` (uwaga na spację, jest konieczna!). Gdy już będą Państwo w odpowiednim katalogu, proszę wpisać:
+
+python manage.py runserver
+
+(na marginesie proszę zauważyć, że plik manage.py odpalamy za pomocą Pythona, bo tak naprawdę jest to program Pythonowy, na co wskazuje
+rozszerzenie `py`)
+Powinniście Państwo zobaczyć w konsoli szereg komunikatów towarzyszących uruchamianiu lokalnego servera deweloperskiego a na końcu zobaczą
+Państwo link: http://127.0.0.1:8000/
+Proszę w niego kliknąć lub skopiować do przeglądarki i powinna pokazać się defaultowa strona z rakietką.
+
+W razie problemów proszę pisać, będziemy też pewnie to jeszcze omawiać na zajęciach.
